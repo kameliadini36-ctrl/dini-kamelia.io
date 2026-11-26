@@ -1,0 +1,622 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222222;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fafafa;
+    border-right: 1px solid #eeeeee;
+    padding: 15px;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+/* SIDEBAR PROFILE */
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 5px 25px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.sidebar-profile img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.profile-name p {
+    font-size: 14px;
+    color: #888888;
+    line-height: 1.6;
+}
+
+/* SIDEBAR MENU */
+.sidebar-menu {
+    margin-top: 30px;
+    width: 270;
+    height: 100vh;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 16px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    color: #555555;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sidebar-menu a:hover {
+    background: #eeeeee;
+    color: #111111;
+}
+
+.sidebar-menu .active {
+    background: #111111;
+    color: #ffffff;
+}
+
+.sidebar-menu .active:hover {
+    background: #333333 !important;
+    color: #ffffff !important;
+}
+
+.sidebar-menu .arrow,
+.sidebar-social .arrow {
+    margin-left: auto;
+    font-size: 9px;
+    color: #999999;
+}
+
+.sidebar-menu .active .arrow {
+    color: #ffffff;
+}
+
+/* SEARCH */
+.sidebar-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 200px;
+    padding: 8px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    color: #888888;
+}
+
+.sidebar-search i {
+    font-size: 11px;
+}
+
+.sidebar-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 10px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 270px;
+    padding: 65px 45px 30px;
+    background: #ffffff;
+}
+
+/* TOP HEADER */
+.top-header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.menu-icon {
+    font-size: 9px;
+    color: #111111;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.available {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: #555555;
+}
+
+.green-dot {
+    width: 7px;
+    height: 7px;
+    background: #28b463;
+    border-radius: 50%;
+}
+
+.template-btn {
+    padding: 8px 13px;
+    background: #111111;
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* ===== HOME ===== */
+.intro {
+    width: 100%;
+    max-width: 950px;
+    margin: 25px 30px;
+    padding: 25px;
+    box-sizing: border-box;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+/* Judul utama */
+.intro h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(244, 171, 119, 0.966);
+}
+
+.intro h1 {
+    max-width: 750px;
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.3;
+    font-weight: 700;
+    color: #171717;
+    margin: 0 0 25px;
+}
+
+/* Foto dan identitas */
+.intro-profile {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+/* Foto profil */
+.intro-profile img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 3px solid #e5e7eb;
+}
+
+/* Nama dan keterangan profil */
+.intro-profile h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.intro-profile p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Deskripsi Home */
+.intro>p {
+    max-width: 780px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #dfd4d4;
+    margin: 20px 0 25px;
+}
+
+/* Tombol More About Me */
+.intro a {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.intro a:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+.intro h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(244, 171, 119, 0.966);
+}
+
+/*---home---*/
+@media (max-width: 768px) {
+    .intro {
+        font-size: 30px;
+        font-weight: 700;
+        color: #6b6363;
+        margin: 0 0 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+        color: #222;
+    }
+
+
+    .intro-profile img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .intro>p {
+        font-size: 25px;
+    }
+}
+
+/* ===== MY EDUCATION ===== */
+
+.education-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    color: #d4c2c2;
+    font-family: Arial, sans-serif;
+}
+
+/* Judul halaman */
+.education-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Deskripsi */
+.education-section .subtitle {
+    font-size: 14px;
+    color: #0a0808;
+    margin: 0 0 35px;
+    line-height: 1.6;
+}
+
+/* Garis timeline */
+.education-list {
+    position: relative;
+    padding-left: 28px;
+    border-left: 2px solid #d8d8d8;
+}
+
+/* Kartu pendidikan */
+.education-item {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease,
+        box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Titik timeline */
+.education-item::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 25px;
+    width: 14px;
+    height: 14px;
+    background: #080707;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+/* Nama sekolah dan kampus */
+.education-item h3 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #252525;
+    margin: 0 0 8px;
+}
+
+/* Tahun pendidikan */
+.education-item p {
+    font-size: 14px;
+    color: #0f0d0d;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Efek hover */
+.education-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: #d5d5d5;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .education-section {
+        padding: 20px 15px;
+    }
+
+    .education-section h2 {
+        font-size: 25px;
+    }
+
+    .education-list {
+        padding-left: 24px;
+    }
+
+    .education-item {
+        padding: 15px;
+    }
+
+    .education-item::before {
+        left: -33px;
+    }
+
+    .education-item h3 {
+        font-size: 16px;
+    }
+
+    .education-item p {
+        font-size: 13px;
+    }
+}
+
+/* ORGANIZATION */
+.project-row {
+    margin: 15px;
+}
+
+.project-column {
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    display: block;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 12px;
+}
+
+.project-info h3 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    min-height: 48px;
+    font-size: 10px;
+    line-height: 1.6;
+    color: #777777;
+}
+
+.project-info span {
+    display: block;
+    font-size: 9px;
+    color: #999999;
+    margin-top: 10px;
+}
+
+/* HOBBY */
+.hobby-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+/* Kartu hobi */
+.hobby-card {
+    min-width: 0;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* Ikon */
+.hobby-card .icon {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* Judul */
+.hobby-card h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 12px;
+}
+
+/* Isi kartu */
+.hobby-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Foto */
+.hobby-content img {
+    display: block;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Deskripsi */
+.hobby-content p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+    color: #999999;
+    font-size: 10px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .sidebar-search {
+        width: 160px;
+    }
+
+    .main-content {
+        margin-left: 190px;
+    }
+
+    .home-section {
+        padding: 40px 25px;
+    }
+
+    .content-section {
+        padding: 25px;
+    }
+
+    .intro h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .sidebar-profile {
+        padding: 8px;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .sidebar-menu a {
+        flex: 1 1 30%;
+        justify-content: center;
+        padding: 10px 5px;
+    }
+
+    .sidebar-menu a .arrow {
+        display: none;
+    }
+
+    .sidebar-social {
+        display: none;
+    }
+
+    .sidebar-search {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .top-header {
+        padding: 0 15px;
+        height: 55px;
+    }
+
+    .home-section {
+        padding: 35px 20px;
+    }
+
+    .intro h1 {
+        font-size: 24px;
+    }
+
+    .content-section {
+        padding: 25px 20px;
+    }
+
+    .about-details {
+        gap: 20px;
+    }
+
+    .project-card img {
+        height: 190px;
+    }
+
+}
